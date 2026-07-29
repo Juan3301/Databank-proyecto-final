@@ -170,11 +170,8 @@ excepciones. Es autocontenido por lo que no depende de `Bank` para tener sentido
 ```mermaid
 classDiagram
     direction TB
-
-    %% =========================================================
     %% DIAGRAMA 1 / 2 — MODELOS DE DOMINIO  (carpeta models/)
     %% No incluye Bank ni los servicios: ver Diagrama 2/2.
-    %% =========================================================
 
     %% --- Excepciones (models/exceptions) ---
     class Exception {
@@ -291,7 +288,7 @@ classDiagram
     AutenticatableEmployee "1" *-- "1" AutenticatableHelper : _helper
     CommercialPartner "1" *-- "1" AutenticatableHelper : _helper
 
-    %% --- Auditoría de actividad (models/Log) ---
+    %%  Auditoría de actividad (models/Log) 
     class Log {
         +str id
         +datetime date
@@ -306,7 +303,7 @@ classDiagram
 
     Log "many" o-- "1" Employee : employee
 
-    %% --- Cuentas bancarias (models/accounts) ---
+    %% Cuentas bancarias (models/accounts) 
     class BankAccount {
         +int account_count$
         +int bank_number
@@ -470,14 +467,11 @@ para no perder las flechas de relación — su definición completa
 classDiagram
     direction TB
 
-    %% =========================================================
+    %%
     %% DIAGRAMA 2 / 2 — BANK Y CAPA DE SERVICIOS  (carpeta services/)
     %% Las clases marcadas <<ver Diagrama 1/2>> están simplificadas
-    %% aquí sólo para no perder las flechas de relación; su versión
-    %% completa (atributos y métodos) vive en el Diagrama 1/2 (Modelos).
-    %% =========================================================
 
-    %% --- Clases "puente" con Modelos (versión resumida) ---
+    %%  Clases "puente" con Modelos (versión resumida)
     class Client {
         <<ver Diagrama 1/2>>
     }
@@ -494,7 +488,7 @@ classDiagram
         <<ver Diagrama 1/2>>
     }
 
-    %% --- Núcleo: Bank ---
+    %% Núcleo: Bank 
     class Bank {
         +str name
         +int bank_number
@@ -535,7 +529,7 @@ classDiagram
         +import_data_json(filepath) bool
     }
 
-    %% --- Datos auxiliares creados FUERA de Bank (agregación) ---
+    %% Datos auxiliares creados FUERA de Bank (agregación) 
     class BonusAdmin {
         -float __total_bonus
         +register(employee)
@@ -693,7 +687,7 @@ classDiagram
         +unblock_employee(employee)
     }
 
-    %% --- Relaciones de Bank con sus datos (agregación: nacen afuera) ---
+    %% Relaciones de Bank con sus datos (agregación: nacen afuera) 
     Bank "1" o-- "many" Client : clients
     Bank "1" o-- "many" Employee : employees
     Bank "1" o-- "many" BankAccount : accounts
@@ -704,7 +698,7 @@ classDiagram
     Bank "1" o-- "many" PromotionRequest : promotion_requests
     Bank "1" o-- "many" SalaryIncreaseRequest : salary_requests
 
-    %% --- Relaciones de Bank con sus servicios (composición: nacen adentro) ---
+    %% Relaciones de Bank con sus servicios (composición: nacen adentro) 
     Bank "1" *-- "1" SearchObjects : search
     Bank "1" *-- "1" ListObjects : list_objects
     Bank "1" *-- "1" ManageAccounts : manage_accounts
