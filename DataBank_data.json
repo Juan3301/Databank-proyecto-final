@@ -1,0 +1,179 @@
+{
+    "bank_name": "DataBank",
+    "bank_number": 2980374,
+    "password": "1234",
+    "interest_rate": 0.06,
+    "clients": [
+        {
+            "name": "jeyms esteban",
+            "dni": 1234517,
+            "age": 20,
+            "profession": "Ètudiant",
+            "is_blacklisted": false,
+            "blacklist_reason": "",
+            "registration_date": "2026-07-28T17:40:02.647586",
+            "credits": [
+                {
+                    "amount": 1000000000000.0,
+                    "interest_rate": 0.06,
+                    "months": 6,
+                    "approved": false,
+                    "remaining_balance": 1000000000000.0,
+                    "status": "Pendiente"
+                }
+            ]
+        },
+        {
+            "name": "LAU",
+            "dni": 1057846523,
+            "age": 21,
+            "profession": "étudiant",
+            "is_blacklisted": false,
+            "blacklist_reason": "",
+            "registration_date": "2026-07-28T17:44:32.885749",
+            "credits": []
+        },
+        {
+            "name": "lau",
+            "dni": 86412548,
+            "age": 25,
+            "profession": "Cocinera",
+            "is_blacklisted": false,
+            "blacklist_reason": "",
+            "registration_date": "2026-07-28T20:27:18.610657",
+            "credits": []
+        }
+    ],
+    "employees": [
+        {
+            "employee_type": "Director",
+            "name": "Laura Espinosa",
+            "dni": "1021678463",
+            "position": "Director",
+            "salary": 50000,
+            "experience": 1,
+            "is_blocked": false,
+            "failed_attempts": 0,
+            "can_change_role": true,
+            "locked_until": null,
+            "password": "julilaura",
+            "register_date": "2026-07-28T17:37:21.158533",
+            "department": "Ingeniería"
+        }
+    ],
+    "accounts": [
+        {
+            "account_type": "SavingsAccount",
+            "bank_number": 2980374,
+            "account_number": "12704751",
+            "client_dni": 1234517,
+            "client_name": "jeyms esteban",
+            "balance": 9999900.0,
+            "interest_rate": 0.5,
+            "overdraft_limit": 0.0,
+            "account_active": true,
+            "commission_value": 0.0,
+            "creation_date": "2026-07-28T17:41:54.093211",
+            "locked_until": null,
+            "transactions": [],
+            "cards": [
+                {
+                    "card_number": "2953160098491299",
+                    "cvv": "850",
+                    "pin": "2109",
+                    "expiration_date": "2030-07-27T17:41:54.093257",
+                    "account_number": "12704751",
+                    "is_credit_card": false,
+                    "is_debit_card": true,
+                    "is_blocked": false
+                }
+            ],
+            "transfer_limit": 5000000,
+            "withdrawals_without_balance": 0,
+            "transfers_without_balance": 0,
+            "daily_withdrawal_limit": 6
+        },
+        {
+            "account_type": "SavingsAccount",
+            "bank_number": 2980374,
+            "account_number": "27320083",
+            "client_dni": 1057846523,
+            "client_name": "LAU",
+            "balance": 100.0,
+            "interest_rate": 0.5,
+            "overdraft_limit": 0.0,
+            "account_active": true,
+            "commission_value": 0.0,
+            "creation_date": "2026-07-28T17:44:40.463297",
+            "locked_until": null,
+            "transactions": [],
+            "cards": [
+                {
+                    "card_number": "9017838148306013",
+                    "cvv": "876",
+                    "pin": "2109",
+                    "expiration_date": "2030-07-27T17:44:40.463344",
+                    "account_number": "27320083",
+                    "is_credit_card": false,
+                    "is_debit_card": true,
+                    "is_blocked": false
+                }
+            ],
+            "transfer_limit": 5000000,
+            "withdrawals_without_balance": 0,
+            "transfers_without_balance": 0,
+            "daily_withdrawal_limit": 6
+        }
+    ],
+    "transactions": [],
+    "logs": [],
+    "bonus_admin": {
+        "total_bonus": 0.0
+    },
+    "promotion_requests": [],
+    "salary_requests": [],
+    "audit_history": [
+        {
+            "timestamp": "2026-07-28 17:37:21",
+            "action_type": "CREATE",
+            "operator_name": "Laura Espinosa",
+            "target_name": "Laura Espinosa",
+            "target_dni": "1021678463",
+            "details": ""
+        },
+        {
+            "timestamp": "2026-07-28 17:46:59",
+            "action_type": "CREATE",
+            "operator_name": "Laura Espinosa",
+            "target_name": "Efigenia Muñoz",
+            "target_dni": "52541022",
+            "details": ""
+        },
+        {
+            "timestamp": "2026-07-28 17:48:15",
+            "action_type": "UPDATE",
+            "operator_name": "Laura Espinosa",
+            "target_name": "Efigenia Muñoz",
+            "target_dni": "52541022",
+            "details": "Aumento salarial aprobado. Motivo original: mi hija es la directora"
+        },
+        {
+            "timestamp": "2026-07-28 17:48:44",
+            "action_type": "DELETE",
+            "operator_name": "Laura Espinosa",
+            "target_name": "Efigenia Muñoz",
+            "target_dni": "52541022",
+            "details": "me das igual lol bye"
+        }
+    ],
+    "audit_logs": [
+        {
+            "timestamp": "2026-07-28 17:48:08",
+            "action_type": "REJECT",
+            "operator_name": "Laura Espinosa",
+            "target_name": "Efigenia Muñoz",
+            "target_dni": "52541022",
+            "details": "Solicitud de ascenso rechazada."
+        }
+    ]
+}
